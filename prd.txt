@@ -1,0 +1,80 @@
+Product Requirements Document (PRD)
+Product Name: UpLink – Universal Digital Delivery & Payment Platform
+Owner: Aravind
+Version: 1.0
+Date: October 2025
+🧭 1. Overview
+
+Purpose:
+A secure, automated platform for freelancers to deliver digital assets—videos, images, 3D files, documents, dashboards, and more—while protecting intellectual property and ensuring smooth, automated payments.
+
+🎯 2. Objectives & Goals
+
+Provide a secure file delivery experience for freelancers.
+
+Automate payment processing and revenue sharing.
+
+Prevent intellectual property theft through watermarking and preview control.
+
+Reduce manual communication overhead between freelancers and clients.
+
+Success Metrics:
+
+95% payment completion without manual intervention.
+
+80% reduction in file piracy or unauthorized access.
+
+10K active freelancer users within 6 months.
+
+👤 3. Target Users
+
+Freelancers / Creators: Deliver videos, designs, dashboards, or digital assets securely.
+
+Clients / Agencies: Receive watermarked previews and access to full content after payment.
+
+🧩 4. Problem Statement
+
+Freelancers face challenges in:
+
+Protecting digital assets from piracy or early leaks.
+
+Collecting payments securely and efficiently.
+
+Managing client approvals and file delivery manually.
+
+UpLink solves these issues by automating file delivery, securing previews, and integrating direct UPI-based payments.
+
+💡 5. Proposed Solution
+
+A web-based platform where freelancers can:
+
+Upload digital assets (videos, images, 3D files, documents, etc.).
+
+Automatically generate secure previews with dynamic watermarks (client name, timestamp).
+
+Receive automated payouts post verified payments via Cashfree UPI.
+
+Clients instantly gain access to unlocked content upon payment.
+
+⚙️ 6. Key Features & Requirements
+Feature	Description	Priority	Acceptance Criteria
+Multi-File Support	Upload videos, images, 3D models, PDFs, dashboards, etc.	High	All supported file types processed correctly for preview-only access.
+Secure Delivery	Previews watermarked dynamically; 3D & video files stream securely.	High	Preview displayed in-browser with no direct download.
+Automated Payments	Cashfree integration for UPI & gateway payments.	High	Payment automatically splits freelancer share & commission.
+Instant Payouts	Freelancers receive payments directly via UPI number.	High	Payout confirmation within 60 seconds post-transaction.
+Notifications & Access Control	Auto-notify freelancers on payments; grant client access post-payment.	Medium	Clients can access full files immediately after verification.
+🧠 7. Technical Requirements
+
+Frontend: React + Tailwind (secure preview player for images, videos, 3D models).
+
+Backend: Node.js + Express + MongoDB.
+
+Payment Gateway: Cashfree API (UPI & card support).
+
+Security:
+
+AES-256 encrypted file storage (S3 or Cloudinary).
+
+Dynamic watermark generation (via FFmpeg or Canvas API).
+
+JWT-based session authentication.
