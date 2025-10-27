@@ -1,0 +1,5 @@
+[submodule "frontend"]
+	path = frontend
+	url = https://github.com/aravindpulluri116/uplink-secure-pay.git
+	branch = main
+
