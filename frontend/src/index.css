@@ -1,0 +1,174 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 220 25% 98%;
+    --foreground: 230 20% 12%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 230 20% 12%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 230 20% 12%;
+
+    --primary: 280 85% 65%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 290 80% 72%;
+    --primary-dark: 275 75% 45%;
+
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 230 20% 12%;
+
+    --muted: 220 15% 92%;
+    --muted-foreground: 230 10% 45%;
+
+    --accent: 170 80% 60%;
+    --accent-foreground: 0 0% 100%;
+    --accent-glow: 165 75% 70%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 13% 88%;
+    --input: 220 13% 88%;
+    --ring: 252 70% 58%;
+
+    --radius: 0.75rem;
+    
+    /* Custom Design Tokens */
+    --gradient-primary: linear-gradient(135deg, hsl(280 85% 65%), hsl(290 80% 72%));
+    --gradient-accent: linear-gradient(135deg, hsl(170 80% 60%), hsl(165 75% 70%));
+    --gradient-mesh: radial-gradient(at 27% 37%, hsl(280 85% 65% / 0.15) 0px, transparent 0%),
+                     radial-gradient(at 97% 21%, hsl(170 80% 60% / 0.15) 0px, transparent 50%),
+                     radial-gradient(at 52% 99%, hsl(290 80% 72% / 0.15) 0px, transparent 50%),
+                     radial-gradient(at 10% 29%, hsl(165 75% 70% / 0.15) 0px, transparent 50%);
+    --shadow-premium: 0 20px 60px -15px hsl(280 85% 65% / 0.4);
+    --shadow-glow: 0 0 80px hsl(290 80% 72% / 0.5);
+    --shadow-soft: 0 4px 20px hsl(280 85% 65% / 0.1);
+    --transition-smooth: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 230 25% 8%;
+    --foreground: 220 20% 95%;
+
+    --card: 230 20% 12%;
+    --card-foreground: 220 20% 95%;
+
+    --popover: 230 20% 12%;
+    --popover-foreground: 220 20% 95%;
+
+    --primary: 252 70% 58%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 262 75% 68%;
+
+    --secondary: 230 20% 18%;
+    --secondary-foreground: 220 20% 95%;
+
+    --muted: 230 20% 16%;
+    --muted-foreground: 230 10% 60%;
+
+    --accent: 186 75% 55%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 230 20% 20%;
+    --input: 230 20% 20%;
+    --ring: 252 70% 58%;
+    
+    --gradient-primary: linear-gradient(135deg, hsl(252 70% 58%), hsl(262 75% 68%));
+    --gradient-accent: linear-gradient(135deg, hsl(262 75% 68%), hsl(186 75% 55%));
+    --gradient-hero: linear-gradient(135deg, hsl(252 70% 58%) 0%, hsl(262 75% 68%) 50%, hsl(186 75% 55%) 100%);
+    --shadow-premium: 0 10px 40px -10px hsl(252 70% 58% / 0.4);
+    --shadow-glow: 0 0 60px hsl(262 75% 68% / 0.5);
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer utilities {
+  .animate-fade-in {
+    animation: fadeIn 0.6s ease-out forwards;
+  }
+  
+  .animate-fade-in-up {
+    animation: fadeInUp 0.6s ease-out forwards;
+    opacity: 0;
+  }
+  
+  .delay-200 {
+    animation-delay: 0.2s;
+  }
+  
+  .delay-300 {
+    animation-delay: 0.3s;
+  }
+  
+  .delay-500 {
+    animation-delay: 0.5s;
+  }
+  
+  .delay-1000 {
+    animation-delay: 1s;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
